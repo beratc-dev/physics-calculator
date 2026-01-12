@@ -1,54 +1,38 @@
 # Physics Calculator
 
-A simple physics calculator built with Python to solve fundamental high school-level physics problems using basic formulas.
+A Python-based physics calculator designed to compute a wide range of fundamental and advanced physics quantities.
 
 ## Purpose
 
-This project was created to:
+This project is developed to:
 
-* Practice applying physics formulas through programming
-* Improve logical and algorithmic thinking
-* Build an academic GitHub portfolio for future engineering and science studies
+* Apply physics formulas through programming
+* Strengthen analytical and problem-solving skills
+* Build a long-term academic GitHub portfolio
+* Support future studies in engineering, physics, and space sciences
+
+## Scope
+
+The calculator is structured to handle many different physical quantities, including but not limited to mechanics-related calculations.
+The project is intentionally designed to be expandable, allowing the addition of dozens or even hundreds of physics calculations over time.
 
 ## Features
 
-The calculator currently supports:
+* Command-line based user interaction
+* Modular structure using functions
+* Unit-aware numerical calculations
+* Basic input validation for physical correctness
 
-* Speed calculation
-* Acceleration calculation
-* Force calculation (Newton's Second Law)
-* Work calculation
-
-All calculations are based on standard SI units.
-
-## How to Run
-
-1. Make sure Python 3 is installed
-2. Clone the repository
-3. Run the program:
-
-```
-python physics_calculator.py
-```
-
-4. Choose a calculation from the menu by entering the corresponding number.
-
-## Topics Covered
-
-* Kinematics (speed and acceleration)
-* Newton's Laws
-* Work and force relationships
-* Unit-based numerical calculations
-
-## Technologies Used
+## Technologies
 
 * Python 3
 
-## Future Plans
+## Future Development
 
-* Add more physics formulas
-* Improve input validation
-* Expand into astronomy and space-related calculations
+* Expansion with more physics domains
+* Stronger input validation and error handling
+* More advanced physics models
+* Possible transition to a graphical or web-based interface
 
 ## License
 
