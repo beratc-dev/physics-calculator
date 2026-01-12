@@ -33,12 +33,26 @@ def calculate_force():
         print("Force:", force, "N")
 
 
+def calculate_work():
+    force = float(input("Enter force (N): "))
+    distance = float(input("Enter distance (meters): "))
+    
+    if distance == 0:
+        print("Distance is zero, work will be zero.")
+    elif force == 0:
+        print("Force is zero, work will be zero.")
+    else:
+        work = force * distance
+        print("Work:", work, "J")
+
+
 print("Physics Calculator")
 print("1 - Calculate Speed")
 print("2 - Calculate Acceleration")
 print("3 - Calculate Force")
+print("4 - Calculate Work")
 
-choice = input("Choose an option (1, 2, or 3): ")
+choice = input("Choose an option (1, 2, 3, or 4): ")
 
 if choice == "1":
     calculate_speed()
@@ -46,5 +60,7 @@ elif choice == "2":
     calculate_acceleration()
 elif choice == "3":
     calculate_force()
+elif choice == "4":
+    calculate_work()
 else:
     print("Invalid choice")
