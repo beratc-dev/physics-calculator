@@ -1,33 +1,60 @@
-# Physics Calculator 
+# Physics Calculator
 
-A basic physics calculator built with Python to solve fundamental high-school level physics problems.
+A simple physics calculator built with Python to solve fundamental high school-level physics problems using basic formulas.
 
-##  Purpose
+## Purpose
 
 This project was created to:
 
-* Practice applying physics formulas using programming
-* Improve problem-solving and algorithmic thinking
+* Practice applying physics formulas through programming
+* Improve logical and algorithmic thinking
 * Build an academic GitHub portfolio for future engineering and science studies
 
-##  Topics Covered
+## Features
 
-* Velocity and acceleration calculations
-* Force (Newton’s Laws)
-* Basic kinematics formulas
+The calculator currently supports:
+
+* Speed calculation
+* Acceleration calculation
+* Force calculation (Newton's Second Law)
+* Work calculation
+
+All calculations are based on standard SI units.
+
+## How to Run
+
+1. Make sure Python 3 is installed
+2. Clone the repository
+3. Run the program:
+
+```
+python physics_calculator.py
+```
+
+4. Choose a calculation from the menu by entering the corresponding number.
+
+## Topics Covered
+
+* Kinematics (speed and acceleration)
+* Newton's Laws
+* Work and force relationships
 * Unit-based numerical calculations
 
-##  Technologies
+## Technologies Used
 
 * Python 3
 
-##  Future Plans
+## Future Plans
 
 * Add more physics formulas
-* Include user input validation
-* Expand to astronomy and space-related calculations
+* Improve input validation
+* Expand into astronomy and space-related calculations
 
-##  Author
+## License
 
-**Berat Cetin**
+This project is licensed under the MIT License.
+
+## Author
+
+Berat Cetin
 High school student interested in physics, aerospace engineering, and space science
