@@ -46,13 +46,26 @@ def calculate_work():
         print("Work:", work, "J")
 
 
+def calculate_density():
+    mass = float(input("Enter mass (kg): "))
+    volume = float(input("Enter volume (m³): "))
+
+    if volume == 0:
+        print("Volume cannot be zero for a physical object.")
+    elif mass == 0:
+        print("An object cannot have zero mass.")
+    else:
+        density = mass / volume
+        print("Density:", density, "kg/m³")
+
 print("Physics Calculator")
 print("1 - Calculate Speed")
 print("2 - Calculate Acceleration")
 print("3 - Calculate Force")
 print("4 - Calculate Work")
+print("5 - Calculate Density")
 
-choice = input("Choose an option (1, 2, 3, or 4): ")
+choice = input("Choose an option (1, 2, 3, 4, or 5): ")
 
 if choice == "1":
     calculate_speed()
@@ -62,5 +75,7 @@ elif choice == "3":
     calculate_force()
 elif choice == "4":
     calculate_work()
+elif choice == "5":
+    calculate_density()
 else:
     print("Invalid choice")
