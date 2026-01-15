@@ -61,7 +61,7 @@ def calculate_density():
 
 def calculate_pressure():
     force = float(input("Enter force (N): "))
-    area = float(input("Enter area (m²)"))
+    area = float(input("Enter area (m²): "))
 
     if area == 0:
         print("Area cannot be zero.")
@@ -79,7 +79,7 @@ def calculate_potential_energy():
         print("An object cannot have zero mass.")
     else:
         potential_energy = mass * gravity * height
-        print("Kinetic Energy:", potential_energy, "J" )
+        print("Potential Energy:", potential_energy, "J" )
 
 
 def calculate_kinetic_energy():
@@ -93,6 +93,17 @@ def calculate_kinetic_energy():
         print("Kinetic Energy:", kinetic_energy, "J" )
 
 
+def calculate_momentum():
+    mass = float(input("Enter mass (kg): "))
+    velocity = float(input("Enter velocity (m/s): "))
+
+    if mass == 0:
+        print("An object cannot have zero mass.")
+    else:
+        momentum = mass * velocity
+        print("Momentum:", momentum, "p")
+
+
 print("Physics Calculator")
 print("1 - Calculate Speed")
 print("2 - Calculate Acceleration")
@@ -102,8 +113,9 @@ print("5 - Calculate Density")
 print("6 - Calculate Pressure")
 print("7 - Calculate Potential Energy")
 print("8 - Calculate Kinetic Energy")
+print("9 - Calculate Momentum")
 
-choice = input("Choose an option (1, 2, 3, 4, 5, 6, 7, or 8): ")
+choice = input("Choose an option (1, 2, 3, 4, 5, 6, 7, 8, or 9): ")
 
 if choice == "1":
     calculate_speed()
@@ -121,5 +133,7 @@ elif choice == "7":
     calculate_potential_energy()
 elif choice == "8":
     calculate_kinetic_energy()
+elif choice == "9":
+    calculate_momentum()
 else:
     print("Invalid choice")
