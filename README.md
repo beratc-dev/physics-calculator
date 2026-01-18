@@ -62,5 +62,5 @@ This project is licensed under the MIT License.
 
 ## Author
 
-**Berat Çetin**  
+**Berat Cetin**  
 High school student interested in physics, aerospace engineering, and astronomy.
