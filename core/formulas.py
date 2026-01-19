@@ -182,7 +182,7 @@ def pressure(force: Quantity, area: Quantity) -> Quantity:
         value=value,
         unit="Pa",
         domain="mechanics)
-
+     
 # -----------------
 # THERMODYNAMICS
 # -----------------
@@ -210,3 +210,42 @@ def delta_thermo_entropy(
         unit="J/K",
         domain="thermodynamics",
         is_delta=True)
+
+# -----------------
+# REGISTRY
+# -----------------
+
+from core.registry import FormulaRegistry
+
+registry = FormulaRegistry()
+
+registry.register(
+    key="speed",
+    func=speed,
+    aliases=["velocity", "average speed"]
+)
+
+registry.register(
+    key="acceleration",
+    func=acceleration,
+    aliases=["dv/dt"]
+)
+
+registry.register(
+    key="force",
+    func=force,
+    aliases=["newton force"]
+)
+
+registry.register(
+    key="pressure",
+    func=pressure,
+    aliases=["force per area"]
+)
+
+registry.register(
+    key="delta_thermo_entropy",
+    func=delta_thermo_entropy,
+    aliases=["entropy change", "thermodynamic entropy"]
+)
+
