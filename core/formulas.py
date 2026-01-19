@@ -182,7 +182,29 @@ def pressure(force: Quantity, area: Quantity) -> Quantity:
         value=value,
         unit="Pa",
         domain="mechanics)
-     
+
+
+def power(delta_work: Quantity, delta_time: Quantity) -> Quantity:
+    delta_work.require_value()
+    delta_time.require_value()
+
+    if not delta_work.is_delta:
+        raise ValueError("Work must be a delta quantity.")
+    if not delta_time.is_delta:
+        raise ValueError("Time must be a delta quantity.")
+    if delta_time.value <= 0:
+        raise ValueError("Delta time must be greater than zero.")
+
+    value = delta_work.value / delta_time.value
+
+    return Quantity(
+        key="power",
+        name="Power",
+        symbol="P",
+        value=value,
+        unit="W",
+        domain="mechanics"
+
 # -----------------
 # THERMODYNAMICS
 # -----------------
