@@ -301,3 +301,44 @@ registry.register(
     aliases=["entropy change", "thermodynamic entropy"]
 )
 
+registry.register(
+    key="work",
+    func=work,
+    aliases=["mechanical work"]
+)
+
+registry.register(
+    key="momentum",
+    func=momentum,
+    aliases=["linear momentum"]
+)
+
+registry.register(
+    key="kinetic_energy",
+    func=kinetic_energy,
+    aliases=["kinetic", "motion energy"]
+)
+
+registry.register(
+    key="potential_energy",
+    func=potential_energy,
+    aliases=["gravitational potential energy"]
+)
+
+registry.register(
+    key="density",
+    func=density,
+    aliases=["mass density"]
+)
+
+registry.register(
+    key="power",
+    func=power,
+    aliases=["work rate", "energy per time"]
+)
+
+registry.register(
+    key="impulse",
+    func=impulse,
+    aliases=["momentum change", "force time"]
+)
