@@ -205,6 +205,27 @@ def power(delta_work: Quantity, delta_time: Quantity) -> Quantity:
         unit="W",
         domain="mechanics"
 
+
+def impulse(force: Quantity, delta_time: Quantity) -> Quantity:
+    force.require_value()
+    delta_time.require_value()
+
+    if not delta_time.is_delta:
+        raise ValueError("Time must be a delta quantity.")
+    if delta_time.value <= 0:
+        raise ValueError("Delta time must be greater than zero.")
+
+    value = force.value * delta_time.value
+
+    return Quantity(
+        key="impulse",
+        name="Impulse",
+        symbol="J",
+        value=value,
+        unit="N·s",
+        domain="mechanics",
+        is_delta=True)
+
 # -----------------
 # THERMODYNAMICS
 # -----------------
