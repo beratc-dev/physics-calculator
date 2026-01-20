@@ -25,7 +25,8 @@ def speed(delta_distance: Quantity, delta_time: Quantity) -> Quantity:
         symbol="v",
         value=value,
         unit="m/s",
-        domain="mechanics")
+        domain="mechanics",
+        is_delta=False)
 
 
 def acceleration(delta_velocity: Quantity, delta_time: Quantity) -> Quantity:
@@ -47,7 +48,8 @@ def acceleration(delta_velocity: Quantity, delta_time: Quantity) -> Quantity:
         symbol="a",
         value=value,
         unit="m/s²",
-        domain="mechanics")
+        domain="mechanics",
+        is_delta=False)
 
 
 def force(mass: Quantity, acceleration: Quantity) -> Quantity:
@@ -65,7 +67,8 @@ def force(mass: Quantity, acceleration: Quantity) -> Quantity:
         symbol="F",
         value=value,
         unit="N",
-        domain="mechanics")
+        domain="mechanics",
+        is_delta=False)
 
 
 def work(force: Quantity, delta_distance: Quantity) -> Quantity:
@@ -104,7 +107,8 @@ def momentum(mass: Quantity, velocity: Quantity) -> Quantity:
         symbol="p",
         value=value,
         unit="kg·m/s",
-        domain="mechanics")
+        domain="mechanics",
+        is_delta=False)
 
 
 def kinetic_energy(mass: Quantity, velocity: Quantity) -> Quantity:
@@ -122,7 +126,8 @@ def kinetic_energy(mass: Quantity, velocity: Quantity) -> Quantity:
         symbol="Eₖ",
         value=value,
         unit="J",
-        domain="mechanics")
+        domain="mechanics",
+        is_delta=False)
 
 
 def potential_energy(mass: Quantity, delta_height: Quantity, gravity: Quantity) -> Quantity:
@@ -143,7 +148,8 @@ def potential_energy(mass: Quantity, delta_height: Quantity, gravity: Quantity) 
         symbol="Eₚ",
         value=value,
         unit="J",
-        domain="mechanics")
+        domain="mechanics",
+        is_delta=False)
 
 
 def density(mass: Quantity, volume: Quantity) -> Quantity:
@@ -163,7 +169,8 @@ def density(mass: Quantity, volume: Quantity) -> Quantity:
         symbol="ρ",
         value=value,
         unit="kg/m³",
-        domain="mechanics")
+        domain="mechanics",
+        is_delta=False)
 
 
 def pressure(force: Quantity, area: Quantity) -> Quantity:
@@ -181,7 +188,8 @@ def pressure(force: Quantity, area: Quantity) -> Quantity:
         symbol="p",
         value=value,
         unit="Pa",
-        domain="mechanics)
+        domain="mechanics",
+        is_delta=False)
 
 
 def power(delta_work: Quantity, delta_time: Quantity) -> Quantity:
@@ -203,7 +211,8 @@ def power(delta_work: Quantity, delta_time: Quantity) -> Quantity:
         symbol="P",
         value=value,
         unit="W",
-        domain="mechanics"
+        domain="mechanics",
+        is_delta=False)
 
 
 def impulse(force: Quantity, delta_time: Quantity) -> Quantity:
