@@ -235,6 +235,25 @@ def impulse(force: Quantity, delta_time: Quantity) -> Quantity:
         domain="mechanics",
         is_delta=True)
 
+
+def torque(force: Quantity, lever_arm: Quantity) -> Quantity:
+    force.require_value()
+    lever_arm.require_value()
+
+    if lever_arm.value < 0:
+        raise ValueError("Lever arm length cannot be negative.")
+
+    value = force.value * lever_arm.value
+
+    return Quantity(
+        key="torque",
+        name="Torque",
+        symbol="τ",
+        value=value,
+        unit="N·m",
+        domain="mechanics",
+        is_delta=False)
+
 # -----------------
 # THERMODYNAMICS
 # -----------------
@@ -262,6 +281,30 @@ def delta_thermo_entropy(
         unit="J/K",
         domain="thermodynamics",
         is_delta=True)
+
+# -----------------
+# GENERAL
+# -----------------
+
+def efficiency(useful_output: Quantity, total_input: Quantity) -> Quantity:
+    useful_output.require_value()
+    total_input.require_value()
+
+    if total_input.value <= 0:
+        raise ValueError("Total input must be greater than zero.")
+    if useful_output.value < 0:
+        raise ValueError("Useful output cannot be negative.")
+
+    value = useful_output.value / total_input.value
+
+    return Quantity(
+        key="efficiency",
+        name="Efficiency",
+        symbol="η",
+        value=value,
+        unit="1",
+        domain="general",
+        is_delta=False)
 
 # -----------------
 # REGISTRY
@@ -341,4 +384,17 @@ registry.register(
     key="impulse",
     func=impulse,
     aliases=["momentum change", "force time"]
+)
+
+
+registry.register(
+    key="torque",
+    func=torque,
+    aliases=["moment of force", "rotational force"]
+)
+
+registry.register(
+    key="efficiency",
+    func=efficiency,
+    aliases=["verim", "output/input"]
 )
