@@ -317,84 +317,70 @@ registry = FormulaRegistry()
 registry.register(
     key="speed",
     func=speed,
-    aliases=["velocity", "average speed"]
-)
+    aliases=["velocity", "average speed"])
 
 registry.register(
     key="acceleration",
     func=acceleration,
-    aliases=["dv/dt"]
-)
+    aliases=["dv/dt"])
 
 registry.register(
     key="force",
     func=force,
-    aliases=["newton force"]
-)
+    aliases=["newton force"])
 
 registry.register(
     key="pressure",
     func=pressure,
-    aliases=["force per area"]
-)
+    aliases=["force per area"])
 
 registry.register(
     key="delta_thermo_entropy",
     func=delta_thermo_entropy,
-    aliases=["entropy change", "thermodynamic entropy"]
-)
+    aliases=["entropy change", "thermodynamic entropy"])
 
 registry.register(
     key="work",
     func=work,
-    aliases=["mechanical work"]
-)
+    aliases=["mechanical work"])
 
 registry.register(
     key="momentum",
     func=momentum,
-    aliases=["linear momentum"]
-)
+    aliases=["linear momentum"])
 
 registry.register(
     key="kinetic_energy",
     func=kinetic_energy,
-    aliases=["kinetic", "motion energy"]
-)
+    aliases=["kinetic", "motion energy"])
 
 registry.register(
     key="potential_energy",
     func=potential_energy,
-    aliases=["gravitational potential energy"]
-)
+    aliases=["gravitational potential energy"])
 
 registry.register(
     key="density",
     func=density,
-    aliases=["mass density"]
-)
+    aliases=["mass density"])
 
 registry.register(
     key="power",
     func=power,
-    aliases=["work rate", "energy per time"]
-)
+    aliases=["work rate", "energy per time"])
 
 registry.register(
     key="impulse",
     func=impulse,
-    aliases=["momentum change", "force time"]
-)
+    aliases=["momentum change", "force time"])
 
 
 registry.register(
     key="torque",
     func=torque,
-    aliases=["moment of force", "rotational force"]
-)
+    aliases=["moment of force", "rotational force"])
 
 registry.register(
     key="efficiency",
     func=efficiency,
-    aliases=["efficiency", "output/input"]
-)
+    aliases=["efficiency", "output/input"])
