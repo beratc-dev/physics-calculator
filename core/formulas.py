@@ -396,5 +396,5 @@ registry.register(
 registry.register(
     key="efficiency",
     func=efficiency,
-    aliases=["verim", "output/input"]
+    aliases=["efficiency", "output/input"]
 )
