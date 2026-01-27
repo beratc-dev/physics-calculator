@@ -254,6 +254,28 @@ def torque(force: Quantity, lever_arm: Quantity) -> Quantity:
         domain="mechanics",
         is_delta=False)
 
+def average_velocity(delta_displacement: Quantity, delta_time: Quantity) -> Quantity:
+    delta_displacement.require_value()
+    delta_time.require_value()
+
+    if not delta_displacement.is_delta:
+        raise ValueError("Displacement must be a delta quantity.")
+    if not delta_time.is_delta:
+        raise ValueError("Time must be a delta quantity.")
+    if delta_time.value <= 0:
+        raise ValueError("Delta time must be greater than zero.")
+
+    value = delta_displacement.value / delta_time.value
+
+    return Quantity(
+        key="average_velocity",
+        name="Average velocity",
+        symbol="v̄",
+        value=value,
+        unit="m/s",
+        domain="mechanics",
+        is_delta=False)
+
 # -----------------
 # THERMODYNAMICS
 # -----------------
@@ -384,3 +406,9 @@ registry.register(
     key="efficiency",
     func=efficiency,
     aliases=["efficiency", "output/input"])
+
+registry.register(
+    key="average_velocity",
+    func=average_velocity,
+    aliases=["mean velocity", "displacement over time"])
+
