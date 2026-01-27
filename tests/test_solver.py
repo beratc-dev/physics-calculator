@@ -25,7 +25,7 @@ def test_solver_simple_speed():
 
     v = solver.solve("velocity")
 
-    assert v is not None
+    assert isinstance(v, Quantity)
+    assert v.key == "speed"
     assert v.value == 5
     assert v.unit == "m/s"
-
