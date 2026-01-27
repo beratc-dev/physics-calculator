@@ -339,7 +339,7 @@ registry = FormulaRegistry()
 registry.register(
     key="speed",
     func=speed,
-    aliases=["velocity", "average speed"])
+    aliases=["velocity", "average velocity"])
 
 registry.register(
     key="acceleration",
