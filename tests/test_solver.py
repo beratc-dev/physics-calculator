@@ -29,3 +29,5 @@ def test_solver_simple_speed():
     assert v.key == "speed"
     assert v.value == 5
     assert v.unit == "m/s"
+    assert v.is_delta is False
+    assert v.domain == "mechanics"   
