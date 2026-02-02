@@ -13,7 +13,6 @@ def Q(key, value=None, unit=None, domain="mechanics", is_delta=False):
         is_delta=is_delta
     )
 
-
 def test_solver_simple_speed():
     solver = Solver()
 
@@ -31,3 +30,18 @@ def test_solver_simple_speed():
     assert v.unit == "m/s"
     assert v.is_delta is False
     assert v.domain == "mechanics"   
+
+def test_speed_negative_time_raises_error():
+    solver = Solver()
+
+    d = Q("distance", 10, "m", is_delta=True)
+    t = Q("time", -2, "s", is_delta=True)
+
+    solver.add(d)
+    solver.add(t)
+
+    try:
+        solver.solve("speed")
+        assert False
+    except ValueError:
+        assert True
