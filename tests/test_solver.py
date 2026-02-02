@@ -10,8 +10,7 @@ def Q(key, value=None, unit=None, domain="mechanics", is_delta=False):
         value=value,
         unit=unit,
         domain=domain,
-        is_delta=is_delta
-    )
+        is_delta=is_delta)
 
 def test_solver_simple_speed():
     solver = Solver()
