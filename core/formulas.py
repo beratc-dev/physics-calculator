@@ -397,7 +397,6 @@ registry.register(
     func=impulse,
     aliases=["momentum change", "force time"])
 
-
 registry.register(
     key="torque",
     func=torque,
@@ -412,4 +411,3 @@ registry.register(
     key="average_velocity",
     func=average_velocity,
     aliases=["mean velocity", "displacement over time"])
-
