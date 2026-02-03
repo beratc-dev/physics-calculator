@@ -254,6 +254,7 @@ def torque(force: Quantity, lever_arm: Quantity) -> Quantity:
         domain="mechanics",
         is_delta=False)
 
+
 def average_velocity(delta_displacement: Quantity, delta_time: Quantity) -> Quantity:
     delta_displacement.require_value()
     delta_time.require_value()
